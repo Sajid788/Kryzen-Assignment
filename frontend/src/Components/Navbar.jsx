@@ -57,7 +57,7 @@ const Navbar = () => {
           color="#FFF"
           fontSize="16px"
         >
-          <NavLink to="/product-page">Product</NavLink>
+          <NavLink to="/product">Product</NavLink>
         </Text>
       </HStack>
     </HStack>

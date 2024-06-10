@@ -41,7 +41,7 @@ const Login = () => {
   };
 
   if (auth.isAuth) {
-    navigate("/product-page");
+    navigate("/product");
   }
 
   return (
@@ -98,7 +98,7 @@ const Login = () => {
               type="submit"
               loadingText="Logging in"
             >
-              Log in
+              Login
             </Button>
           </FormControl>
         </Container>
