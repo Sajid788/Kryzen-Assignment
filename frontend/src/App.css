@@ -135,3 +135,116 @@
     cursor: pointer;
     border-radius: 5px;
   }
+
+  
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  max-width: 80%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1001;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+Form{
+  width: 250px;
+}
+
+.modal-content input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-content button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  background: rgb(24, 170, 102);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-content button:last-child {
+  background: #5c83a4;
+}
+
+.product-page-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-page-header {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  margin-bottom: 20px;
+}
+
+.product-page-button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #2f9865;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.product-page-button:hover {
+  background-color: #63c0a1;
+}
+
+
+.product-page-input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  flex: 1; 
+}
+
+.product-list-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-list-table th, .product-list-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.product-list-table th {
+  background-color: #f8f9fa;
+}
+
+
+
+

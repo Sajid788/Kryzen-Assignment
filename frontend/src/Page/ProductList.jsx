@@ -42,15 +42,6 @@ const ProductList = ({
       <Flex justifyContent="space-evenly">
         <Button onClick={onSortByTime}>Sort by Creation Time</Button>
         <Select
-          placeholder="Filter by Product Type"
-          onChange={handleFilterTypeChange}
-          width="200px"
-        >
-          <option value="Electronic">Electronic</option>
-          <option value="Shoe">Shoe</option>
-          <option value="Clothing">Clothing</option>
-        </Select>
-        <Select
           placeholder="Sort by Price"
           onChange={handlePriceOrderChange}
           width="200px"
@@ -74,7 +65,7 @@ const ProductList = ({
                 />
                 <Stack mt="6" spacing="3">
                   <Heading size="md">{product.name}</Heading>
-                  <Text>{product.discription}</Text>
+                  <Text>{product.description}</Text>
                   <Text color="blue.600" fontSize="l">
                     ${product.price}
                   </Text>

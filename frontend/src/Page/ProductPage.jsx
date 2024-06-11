@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-// import Navbar from "../Components/Navbar";
 import ProductList from "./ProductList.jsx";
-// import AddProductModal from "./AddProductModal";
-// import EditProductModal from "./EditProductModal";
-// import "./ProductPage.css";
 import { useToast } from "@chakra-ui/react";
+import AddProduct from "./AddProduct.jsx";
+import EditProduct from "./EditProduct.jsx";
 
 const ProductPage = () => {
   const [products, setProducts] = useState([]);
@@ -75,6 +73,7 @@ const ProductPage = () => {
       });
       toast({
         description: "Product deleted successfully",
+        position:"top",
         status: "success",
         duration: 2000,
         isClosable: true,
@@ -100,6 +99,7 @@ const ProductPage = () => {
     setScheduleTime("");
     toast({
       description: "Scheduled Product added successfully",
+      position:"top",
       status: "success",
       duration: 2000,
       isClosable: true,
@@ -140,7 +140,6 @@ const ProductPage = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
       <div className="product-page-container">
         <div className="product-page-header">
           <div>
@@ -175,17 +174,17 @@ const ProductPage = () => {
           onFilter={handleFilter}
           onSortByTime={handleSortByTime}
         />
-        {/* <AddProductModal
+         <AddProduct
           isOpen={isAddModalOpen}
           onClose={() => setIsAddModalOpen(false)}
           onAdd={handleAddProduct}
         />
-        <EditProductModal
+        <EditProduct
           isOpen={isEditModalOpen}
           onClose={() => setIsEditModalOpen(false)}
           product={editProduct}
           onEdit={handleEditProduct}
-        /> */}
+        /> 
       </div>
     </>
   );
