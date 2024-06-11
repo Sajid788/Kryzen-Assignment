@@ -4,14 +4,14 @@ import {
   Button,
   FormControl,
   FormLabel,
-  Heading,
+  Text,
   Input,
   InputGroup,
   InputRightElement,
   useToast,
 } from "@chakra-ui/react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const usenavigate = useNavigate();
@@ -65,17 +65,18 @@ const SignUp = () => {
 
   return (
     <div>
-      <Heading mb="5">Sign Up Page</Heading>
       <Box
         margin="auto"
         w="30%"
-        mb="10"
-        borderRadius="10"
+        mt="10"
+        backgroundColor="#F0F8FF"
+        borderRadius="8"
         padding="10px"
         boxShadow="rgba(30, 30, 63, 0.15) 0px 30px 70px -10px, rgba(0, 0, 0, 0.3) 0px 20px 40px -20px, rgba(5, 27, 44, 0.25) 0px -1px 3px 0px inset"
       >
+        <Text as='b'  fontSize='3xl' color={"green"}>Sign Up</Text>
         <FormControl maxW="80%" margin="auto">
-          <FormLabel fontWeight={"bold"} mt="10">
+          <FormLabel fontWeight={"bold"} mt="5">
             Username
           </FormLabel>
           <Input
@@ -88,7 +89,7 @@ const SignUp = () => {
           />
         </FormControl>
         <FormControl maxW="80%" margin="auto">
-          <FormLabel fontWeight={"bold"} mt="10">
+          <FormLabel fontWeight={"bold"} mt="5">
             Email
           </FormLabel>
           <Input
@@ -101,7 +102,7 @@ const SignUp = () => {
           />
         </FormControl>
         <FormControl maxW="80%" margin="auto">
-          <FormLabel fontWeight={"bold"} mt="10">
+          <FormLabel fontWeight={"bold"} mt="5">
             Password
           </FormLabel>
           <InputGroup size="md">
@@ -128,12 +129,19 @@ const SignUp = () => {
           colorScheme="green"
           variant={"solid"}
           marginTop="10"
-          mb="10"
+          mb="5"
           onClick={handleSubmit}
         >
           Sign Up
         </Button>
+        <Text mb="8" textAlign="center" color="gray.500">
+          Already have an account?{" "}
+          <NavLink to="/login" color="teal.500">
+            Login
+          </NavLink>
+        </Text>
       </Box>
+      
     </div>
   );
 };

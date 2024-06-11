@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <HStack
-      backgroundColor="#2F855A"
+      backgroundColor="PowderBlue"
       alignItems="center"
       paddingRight={20}
       paddingLeft={20}
@@ -28,12 +28,21 @@ const Navbar = () => {
 
       <Spacer />
       <HStack spacing="20px">
+      <Text
+          fontWeight="500"
+          p="7px 13px"
+          textDecoration="none"
+          color="#4AAB3D"
+          fontSize="16px"
+        >
+          <NavLink to="/product">Product</NavLink>
+        </Text>
         <Text
           fontSize="16px"
           fontWeight="500"
           p="7px 13px"
           textDecoration="none"
-          color="#FFF"
+          color="#4AAB3D"
         >
           {isAuth ? "" : <NavLink to="/">Signup</NavLink>}
         </Text>
@@ -42,7 +51,7 @@ const Navbar = () => {
           fontWeight="500"
           p="7px 13px"
           textDecoration="none"
-          color="#FFF"
+          color="#4AAB3D"
         >
           {isAuth ? (
             <Button onClick={handleLogOut}>Log Out</Button>
@@ -50,15 +59,7 @@ const Navbar = () => {
             <NavLink to="/login">Login</NavLink>
           )}
         </Text>
-        <Text
-          fontWeight="500"
-          p="7px 13px"
-          textDecoration="none"
-          color="#FFF"
-          fontSize="16px"
-        >
-          <NavLink to="/product">Product</NavLink>
-        </Text>
+       
       </HStack>
     </HStack>
   );
