@@ -14,7 +14,7 @@ export const getUserProfile = () => async (dispatch) => {
     },
   };
   try {
-    const { data } = await axios.get(`http://localhost:8080/product/`, config);
+    const { data } = await axios.get(`https://kryzen-backend.vercel.app/product/`, config);
     console.log(data);
     return dispatch({
       type: USER_PROFILE_SUCCESS,

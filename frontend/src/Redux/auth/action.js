@@ -8,7 +8,7 @@ export const LogIn = (creds) => async (dispatch) => {
 
   try {
     const { data } = await axios.post(
-      `http://localhost:8080/user/login`,
+      `https://kryzen-backend.vercel.app/user/login`,
       creds
     );
     console.log(data);

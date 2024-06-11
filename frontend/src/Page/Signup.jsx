@@ -26,7 +26,7 @@ const SignUp = () => {
     const payload = { username, email, password };
 
     try {
-      let res = await axios.post("http://localhost:8080/user/register", payload);
+      let res = await axios.post("https://kryzen-backend.vercel.app/user/register", payload);
       let message = res.data;
       if (typeof res.data === 'object') {
         message = JSON.stringify(res.data);

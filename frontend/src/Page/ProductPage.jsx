@@ -21,7 +21,7 @@ const ProductPage = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/product/", {
+      const response = await axios.get("https://kryzen-backend.vercel.app/product", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("userToken")}`,
         },
@@ -35,7 +35,7 @@ const ProductPage = () => {
 
   const handleAddProduct = async (newProduct) => {
     try {
-      await axios.post("http://localhost:8080/product/add", newProduct, {
+      await axios.post("https://kryzen-backend.vercel.app/product/add", newProduct, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("userToken")}`,
         },
@@ -50,7 +50,7 @@ const ProductPage = () => {
     console.log(updatedProduct._id);
     try {
       await axios.put(
-        `http://localhost:8080/product/edit/${updatedProduct._id}`,
+        `https://kryzen-backend.vercel.app/product/edit/${updatedProduct._id}`,
         updatedProduct,
         {
           headers: {
@@ -66,7 +66,7 @@ const ProductPage = () => {
 
   const handleDeleteProduct = async (_id) => {
     try {
-      await axios.delete(`http://localhost:8080/product/delete/${_id}`, {
+      await axios.delete(`https://kryzen-backend.vercel.app/product/delete/${_id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("userToken")}`,
         },

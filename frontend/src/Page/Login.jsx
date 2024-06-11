@@ -27,7 +27,6 @@ const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { auth } = useSelector((state) => state);
-  console.log(auth);
 
   const handleForm = async (e) => {
     e.preventDefault();

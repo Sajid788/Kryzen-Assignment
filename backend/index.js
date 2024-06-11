@@ -1,9 +1,11 @@
 const express = require("express");
 const { connection, PORT } = require("./config/db");
 const { userRouter } = require("./routes/user_routes");
+const cors = require("cors");
 const { productRouter } = require("./routes/product_routes");
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
