@@ -10,7 +10,7 @@ This project is a simple online store management system. It provides basic funct
 - Signup and login functionality for users.
 - Project mangement like Add, edit, and delete products.
 - Store product data securely in the database.
-- Filter products by type, price range and sort products by time of creation
+- Filter products price range and sort products by time of creation
 
 1. Clone the Repository:
 
