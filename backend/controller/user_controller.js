@@ -6,7 +6,7 @@ require("dotenv").config();
 
 // Register a new user
 const userRegister = async (req, res) => {
-  const { username, email, password } = req.body;
+  const { username, email, password} = req.body;
   if (!username || !email || !password) {
     return res.status(400).json({ msg: "Please fill all the details!!" });
   }
@@ -30,6 +30,7 @@ const userRegister = async (req, res) => {
           username: username,
           email: email,
           password: hash,
+      
         });
         res.json({ message: "User signed up successfully", user });
       } catch (error) {

@@ -21,13 +21,13 @@ const getProducts = async (req, res) => {
 
 // Add new product
 const addProduct = async (req, res) => {
-  const { name, price, type, image } = req.body;
-  if (!name || !price || !type) {
-    return res.status(400).json({ message: "Please fill all required fields" });
+  const { name, price, image, description } = req.body;
+  if (!name || !price || !image || !description) {
+    return res.status(400).json({ message: "Please fill all required fieldsssssss" });
   }
 
   try {
-    const product = await ProductModel.create({ name, price, type, image });
+    const product = await ProductModel.create({ name, price, description, image });
     res.status(201).json({ message: "Product added successfully", product });
   } catch (error) {
     res.status(500).json({ message: "Internal Server Error" });
@@ -37,12 +37,12 @@ const addProduct = async (req, res) => {
 // Edit existing product
 const editProduct = async (req, res) => {
   const { id } = req.params;
-  const { name, price, type, image } = req.body;
+  const { name, price, description, image } = req.body;
 
   try {
     const product = await ProductModel.findByIdAndUpdate(
       id,
-      { name, price, type, image },
+      { name, price, description, image },
       { new: true }
     );
     if (!product) {
