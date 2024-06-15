@@ -15,7 +15,7 @@ This project is a simple online store management system. It provides basic funct
 1. Clone the Repository:
 
 ```bash
-https://github.com/Sajid788/Kryzen-Assignment.git
+ https://github.com/Sajid788/Kryzen-Assignment.git
 ```
 
 2. Navigate to the Project Directory:
