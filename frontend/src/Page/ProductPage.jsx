@@ -21,11 +21,14 @@ const ProductPage = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get("https://kryzen-backend.vercel.app/product", {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("userToken")}`,
-        },
-      });
+      const response = await axios.get(
+        "https://kryzen-backend.vercel.app/product",
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("userToken")}`,
+          },
+        }
+      );
       setProducts(response.data);
       setFilteredProducts(response.data);
     } catch (error) {
@@ -35,11 +38,15 @@ const ProductPage = () => {
 
   const handleAddProduct = async (newProduct) => {
     try {
-      await axios.post("https://kryzen-backend.vercel.app/product/add", newProduct, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("userToken")}`,
-        },
-      });
+      await axios.post(
+        "https://kryzen-backend.vercel.app/product/add",
+        newProduct,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("userToken")}`,
+          },
+        }
+      );
       fetchProducts();
     } catch (error) {
       console.error("Error adding product:", error);
@@ -66,14 +73,17 @@ const ProductPage = () => {
 
   const handleDeleteProduct = async (_id) => {
     try {
-      await axios.delete(`https://kryzen-backend.vercel.app/product/delete/${_id}`, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("userToken")}`,
-        },
-      });
+      await axios.delete(
+        `https://kryzen-backend.vercel.app/product/delete/${_id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("userToken")}`,
+          },
+        }
+      );
       toast({
         description: "Product deleted successfully",
-        position:"top",
+        position: "top",
         status: "success",
         duration: 2000,
         isClosable: true,
@@ -83,23 +93,21 @@ const ProductPage = () => {
       console.error("Error deleting product:", error);
     }
   };
-
   const handleScheduleAddition = () => {
     const delay = parseInt(scheduleTime) * 60000;
     setTimeout(() => {
       handleAddProduct({
         name: "Scheduled Product",
         description: "This product was added automatically",
-        price: 0,
-        image:
-          "https://images6.alphacoders.com/133/1338694.png",
-        product_type: "Electronic",
+        price: 4999,
+        image: "https://images6.alphacoders.com/133/1338694.png",
+       
       });
     }, delay);
     setScheduleTime("");
     toast({
       description: "Scheduled Product added successfully",
-      position:"top",
+      position: "top",
       status: "success",
       duration: 2000,
       isClosable: true,
@@ -174,7 +182,7 @@ const ProductPage = () => {
           onFilter={handleFilter}
           onSortByTime={handleSortByTime}
         />
-         <AddProduct
+        <AddProduct
           isOpen={isAddModalOpen}
           onClose={() => setIsAddModalOpen(false)}
           onAdd={handleAddProduct}
@@ -184,7 +192,7 @@ const ProductPage = () => {
           onClose={() => setIsEditModalOpen(false)}
           product={editProduct}
           onEdit={handleEditProduct}
-        /> 
+        />
       </div>
     </>
   );
