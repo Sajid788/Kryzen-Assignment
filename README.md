@@ -10,12 +10,12 @@ This project is a simple online store management system. It provides basic funct
 - Signup and login functionality for users.
 - Project mangement like Add, edit, and delete products.
 - Store product data securely in the database.
-- Filter products by type, price range and sort products by time of creation
+- Filter products price range and sort products by time of creation
 
 1. Clone the Repository:
 
 ```bash
-https://github.com/Sajid788/Kryzen-Assignment.git
+ https://github.com/Sajid788/Kryzen-Assignment.git
 ```
 
 2. Navigate to the Project Directory:
@@ -35,3 +35,15 @@ npm install
 ```bash
 npm run start
 ```
+## Scrrenshots
+
+1. Signup
+ ![Screenshot 2024-06-11 105232](https://github.com/Sajid788/Kryzen-Assignment/assets/129252454/0f3c89ec-0737-41ad-a464-20ef481913b7)
+
+2. Login
+ ![Screenshot 2024-06-11 105258](https://github.com/Sajid788/Kryzen-Assignment/assets/129252454/7969ea47-6517-49ea-aa9b-f25aa0f9b31e)
+
+3. Product
+![Screenshot 2024-06-11 111016](https://github.com/Sajid788/Kryzen-Assignment/assets/129252454/73891b24-803b-4e08-8a77-832f60691db6)
+
+
